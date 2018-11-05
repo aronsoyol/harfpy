@@ -44,9 +44,6 @@ except ImportError :
     qahirah = None
 #end try
 
-def get_version():
-    return "hello"
-
 def loadlibrary_():
 
     if platform == "linux" or platform == "linux2":

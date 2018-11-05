@@ -11,16 +11,14 @@ from setuptools import setup
 
 
 setup(
-    name = "HarfPy",
-    version = "0.82",
-    description = "language bindings for HarfBuzz",
-    long_description =
-        "language bindings for the HarfBuzz shaper library, for Python 3.3 or later",
-    author = "Lawrence D'Oliveiro",
-    author_email = "ldo@geek-central.gen.nz",
+    name="HarfPy",
+    version="0.82",
+    author="Lawrence D'Oliveiro",
+    author_email="ldo@geek-central.gen.nz",
     url="https://github.com/aronsoyol/harfpy",
-    license = "LGPL v2.1+",
-    test_suite='test',
+    license="LGPL v2.1+",
+    install_requires=None,
     packages=['harfpy'],
-    # py_modules = ["harfbuzz"]
+    test_suite='test',
+    py_modules=["harfbuzz"]
 )

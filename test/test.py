@@ -1,7 +1,12 @@
 from unittest import TestCase
 from harfpy import harfbuzz
-
-class HarfpyTest(TestCase):
-
+# import harfbuzz
+# import harfpy
+class TestTmt(TestCase):
     def test1(self):
-        harfbuzz.get_version()
+        print(harfbuzz.get_version())
+        print()
+        # print(harfb ())
+        # buffer = hb.Buffer.create()
+        # harfbuzz
+        self.assertEqual(1, 1)
