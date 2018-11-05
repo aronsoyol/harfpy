@@ -44,6 +44,8 @@ except ImportError :
     qahirah = None
 #end try
 
+def get_version():
+    return "hello"
 
 def loadlibrary_():
 
