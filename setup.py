@@ -21,5 +21,6 @@ setup(
     url="https://github.com/aronsoyol/harfpy",
     license = "LGPL v2.1+",
     test_suite='test',
-    py_modules = ["harfbuzz"]
+    packages=['harfpy'],
+    # py_modules = ["harfbuzz"]
 )
