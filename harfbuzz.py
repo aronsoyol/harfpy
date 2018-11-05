@@ -27,6 +27,8 @@
 
 import ctypes as ct
 import array
+from sys import platform
+
 from weakref import \
     ref as wref, \
     WeakValueDictionary
@@ -42,7 +44,23 @@ except ImportError :
     qahirah = None
 #end try
 
-hb = ct.cdll.LoadLibrary("libharfbuzz.so.0")
+
+def loadlibrary_():
+
+    if platform == "linux" or platform == "linux2":
+        # linux
+        hb = ct.cdll.LoadLibrary("libharfbuzz.so.0")
+    elif platform == "darwin":
+        # OS X
+        hb = ct.cdll.LoadLibrary("libharfbuzz.dylib")
+    elif platform == "win32":
+        # Windows...
+        hb = ct.cdll.LoadLibrary("libharfbuzz.dll")
+
+    return hb
+
+hb = loadlibrary_()
+
 
 class HARFBUZZ :
     "useful definitions adapted from harfbuzz/*.h. You will need to use the constants" \
